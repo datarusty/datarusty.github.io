@@ -103,20 +103,20 @@ section.success {
 #mainNav {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
-  text-transform: uppercase;
+  text-transform: lowercase;
   border: none;
-  background: #2C3E50; }
+  background: yellow; }
   #mainNav a:focus {
     outline: none; }
   #mainNav .navbar-brand {
     font-size: 1.1rem;
-    color: white; }
+    color: yellow; }
     #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-      color: white; }
+      color: yellow; }
   #mainNav .navbar-nav {
     letter-spacing: 1px; }
     #mainNav .navbar-nav li.nav-item a.nav-link {
-      color: white; }
+      color: yellow; }
       #mainNav .navbar-nav li.nav-item a.nav-link:hover {
         color: #18BC9C;
         outline: none; }
@@ -129,7 +129,7 @@ section.success {
     color: white;
     border-color: white; }
     #mainNav .navbar-toggler:focus, #mainNav .navbar-toggler:hover {
-      color: white;
+      color: yellow;
       border-color: #18BC9C;
       background-color: #18BC9C; }
 
