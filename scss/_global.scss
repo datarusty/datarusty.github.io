@@ -1,23 +1,22 @@
 // Global styling for this template
 body {
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow-x: hidden;
+  @include body-font;
 }
 
 p {
-  font-size: 20px;
+  line-height: 1.75;
 }
 
-p.small {
-  font-size: 16px;
+a {
+  color: $primary;
+  &:hover {
+    color: darken($primary, 10%);
+  }
 }
-a,
-a.active,
-a:active,
-a:focus,
-a:hover {
-  color: $theme-success;
-  outline: none;
+
+.text-primary {
+  color: $primary !important;
 }
 
 h1,
@@ -26,88 +25,74 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
-  text-transform: uppercase;
-}
-
-hr.star-light,
-hr.star-primary {
-  max-width: 250px;
-  margin: 25px auto 30px;
-  padding: 0;
-  text-align: center;
-  border: none;
-  border-top: solid 5px;
-}
-hr.star-light:after,
-hr.star-primary:after {
-  font-family: FontAwesome;
-  font-size: 2em;
-  position: relative;
-  top: -.8em;
-  display: inline-block;
-  padding: 0 0.25em;
-  content: '\f005';
-}
-
-hr.star-light {
-  border-color: white;
-}
-hr.star-light:after {
-  color: white;
-  background-color: $theme-success;
-}
-
-hr.star-primary {
-  border-color: $theme-primary;
-}
-hr.star-primary:after {
-  color: $theme-primary;
-  background-color: white;
-}
-
-.img-centered {
-  margin: 0 auto;
+  @include heading-font;
 }
 
 section {
   padding: 100px 0;
-  h2 {
-    font-size: 3em;
-    margin: 0;
+  h2.section-heading {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
   }
-}
-
-section.success {
-  color: white;
-  background: $theme-success;
-}
-@media(max-width:767px) {
-  section {
-    padding: 75px 0;
-  }
-  section.first {
-    padding-top: 75px;
-  }
-}
-
-.scroll-top {
-  position: fixed;
-  z-index: 1049;
-  right: 2%;
-  bottom: 2%;
-  width: 50px;
-  height: 50px;
-  .btn {
+  h3.section-subheading {
     font-size: 16px;
-    line-height: 28px;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    border-radius: 100%;
-    &:focus {
-      outline: none;
-    }
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 75px;
+    text-transform: none;
+    @include serif-font;
   }
+}
+@media(min-width:768px) {
+  section {
+    padding: 150px 0;
+  }
+}
+
+// Button Styles
+.btn {
+  @include heading-font;
+  font-weight: 700;
+}
+
+.btn-xl {
+  font-size: 18px;
+  padding: 20px 40px;
+}
+
+.btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: darken($primary, 7.5%) !important;
+    border-color: darken($primary, 7.5%) !important;
+    color: white;
+  }
+  &:active,
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba(254, 209, 55,.5) !important;
+  }
+}
+
+// Highlight color customization
+::-moz-selection {
+  background: $primary;
+  text-shadow: none;
+}
+
+::selection {
+  background: $primary;
+  text-shadow: none;
+}
+
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
 }

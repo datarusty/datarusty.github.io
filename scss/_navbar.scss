@@ -1,50 +1,40 @@
 // Styling for the navbar
 #mainNav {
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  border: none;
-  background: $theme-primary;
-  a:focus {
-    outline: none;
+  background-color: $gray-900;
+  .navbar-toggler {
+    font-size: 12px;
+    right: 0;
+    padding: 13px;
+    text-transform: uppercase;
+    color: white;
+    border: 0;
+    background-color: $primary;
+    @include heading-font;
   }
   .navbar-brand {
-    font-size: 1.1rem;
-    color: white;
+    color: $primary;
+    @include script-font;
     &.active,
     &:active,
     &:focus,
     &:hover {
-      color: white;
+      color: darken($primary, 10%);
     }
   }
   .navbar-nav {
-    letter-spacing: 1px;
-    li.nav-item {
-      a.nav-link {
+    .nav-item {
+      .nav-link {
+        font-size: 90%;
+        font-weight: 400;
+        padding: 0.75em 0;
+        letter-spacing: 1px;
         color: white;
+        @include heading-font;
+        &.active,
         &:hover {
-          color: $theme-success;
-          outline: none;
-        }
-        &:active,
-        &:focus {
-          color: white;
+          color: $primary;
         }
       }
-    }
-  }
-  .navbar-toggler {
-    font-size: 14px;
-    padding: 11px;
-    text-transform: uppercase;
-    color: white;
-    border-color: white;
-    &:focus,
-    &:hover {
-      color: white;
-      border-color: $theme-success;
-      background-color: $theme-success;
     }
   }
 }
@@ -55,29 +45,29 @@
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
     -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s;
+    border: none;
+    background-color: transparent;
     .navbar-brand {
-      font-size: 2em;
+      font-size: 1.75em;
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       transition: all 0.3s;
     }
-    .navbar-nav > li.nav-item > a.nav-link.active {
-      color: white;
-      border-radius: 3px;
-      background: $theme-success;
-      &:active,
-      &:focus,
-      &:hover {
-        color: white;
-        background: $theme-success;
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          padding: 1.1em 1em !important;
+        }
       }
     }
-  }
-  #mainNav.navbar-shrink {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    .navbar-brand {
-      font-size: 1.5em;
+    &.navbar-shrink {
+      padding-top: 0;
+      padding-bottom: 0;
+      background-color: $gray-900;
+      .navbar-brand {
+        font-size: 1.25em;
+        padding: 12px 0;
+      }
     }
   }
 }
