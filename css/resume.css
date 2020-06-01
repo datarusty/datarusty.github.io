@@ -7,7 +7,7 @@
 body {
   font-family: 'Helvetica', 'Arial', sans-serif;
   padding-top: 54px;
-  color: #000000;
+  color: black;
 }
 
 @media (min-width: 992px) {
@@ -72,7 +72,7 @@ p.lead {
 }
 
 .social-icons a:hover {
-  background-color: #BD5D38;
+  background-color: red;
 }
 
 .dev-icons {
@@ -80,18 +80,25 @@ p.lead {
 }
 
 .dev-icons .list-inline-item i:hover {
-  color: #BD5D38;
+  color: red;
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
-  color: #666666 !important;
+  color: black;
+  font-weight: 800;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+}
+
+#sideNav .navbar-nav .nav-item .nav-link:hover {
+  color: red;
   font-weight: 800;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
 }
 
 #sideNav .navbar-toggler:focus {
-  outline-color: #d48a6e;
+    color: chartreuse;
 }
 
 @media (min-width: 992px) {
@@ -118,9 +125,8 @@ p.lead {
     padding: 0.5rem;
   }
   #sideNav .navbar-brand .img-profile {
-    max-width: 10rem;
-    max-height: 10rem;
-    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+    max-width: 8rem;
+    max-height: 8rem;
   }
   #sideNav .navbar-collapse {
     display: -webkit-box;
@@ -177,17 +183,17 @@ section.resume-section .resume-item .resume-date {
 }
 
 .bg-primary {
-  background-color: #FFFFFF !important;
+  background-color: white!important;
 }
 
 .text-primary {
-  color: #000000 !important;
+  color: black!important;
 }
 
 a {
-  color: #888888;
+  color: gray;
 }
 
 a:hover, a:focus, a:active {
-  color: #444444;
+  color: red;
 }
