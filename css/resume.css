@@ -84,21 +84,12 @@ p.lead {
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
-  color: black;
   font-weight: 800;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
 }
-
-#sideNav .navbar-nav .nav-item .nav-link:hover {
-  color: red;
-  font-weight: 800;
-  letter-spacing: 0.05rem;
-  text-transform: uppercase;
-}
-
 #sideNav .navbar-toggler:focus {
-    color: chartreuse;
+  outline-color: #d48a6e;
 }
 
 @media (min-width: 992px) {
@@ -183,7 +174,7 @@ section.resume-section .resume-item .resume-date {
 }
 
 .bg-primary {
-  background-color: white!important;
+  background-color: black!important;
 }
 
 .text-primary {
